@@ -8,9 +8,11 @@
     "dev": "set NODE_ENV=DEVELOPMENT& nodemon backend/server",
     "prod": "set NODE_ENV=PRODUCTION& nodemon backend/server",
     "seeder": "node backend/utils/seeder.js",
-    "build": "cd frontend && npm run build",
-    "frontend": "cd frontend && npm install",
-    "heroku-postbuild": "npm run frontend && npm run build"
+    "build": "cd client && npm run build",
+    "install-client": "cd frontend && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "dev-client": "cd client && npm start",
+    "both-install": "concurrently \"npm install\"  \"npm run install-client\""
   },
   "author": "Sumon Fakir",
   "license": "ISC",
