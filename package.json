@@ -9,13 +9,15 @@
     "prod": "set NODE_ENV=PRODUCTION& nodemon backend/server",
     "seeder": "node backend/utils/seeder.js",
     "build": "cd frontend && npm run build",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
+    "install-client": "cd frontend && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build"
   },
   "author": "Sumon Fakir",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "client": "^0.0.1",
     "cloudinary": "^1.27.1",
     "cookie-parse": "^0.4.0",
     "cookie-parser": "^1.4.5",
