@@ -11,7 +11,7 @@
     "build": "cd client && npm run build",
     "install-client": "cd frontend && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
-    "dev-client": "cd client && npm start",
+    "dev-client": "cd frontend && npm start",
     "both-install": "concurrently \"npm install\"  \"npm run install-client\""
   },
   "author": "Sumon Fakir",
