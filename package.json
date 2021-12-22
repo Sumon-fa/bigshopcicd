@@ -8,6 +8,7 @@
     "dev": "set NODE_ENV=DEVELOPMENT& nodemon backend/server",
     "prod": "set NODE_ENV=PRODUCTION& nodemon backend/server",
     "seeder": "node backend/utils/seeder.js",
+    "build": "cd frontend && npm run build",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "Sumon Fakir",
