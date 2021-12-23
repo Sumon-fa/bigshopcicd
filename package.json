@@ -4,13 +4,12 @@
   "description": "Full e-commerce site using mern",
   "main": "server.js",
   "scripts": {
+    "preinstall": "cd frontend && npm install",
     "start": "node backend/server.js",
     "dev": "set NODE_ENV=DEVELOPMENT& nodemon backend/server",
     "prod": "set NODE_ENV=PRODUCTION& nodemon backend/server",
     "seeder": "node backend/utils/seeder.js",
-    "build": "cd frontend && npm run build",
-    "preinstall": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
+    "build": "cd frontend && npm run build"
   },
   "author": "Sumon Fakir",
   "license": "ISC",
